@@ -1,8 +1,8 @@
-import MySQLdb
+import pymysql
  
-db = MySQLdb.connect("192.168.0.131","junhhe20","he","junhhe20")
+db = pymysql.connect(host="localhost", user="root", passwd="password", db="school")
 # create cursor 
-cursor = db.cursor(MySQLdb.cursors.DictCursor)
+cursor = db.cursor(pymysql.cursors.DictCursor)
 db.autocommit(True)
 # create table as per requirement
 name = 'stephen'
